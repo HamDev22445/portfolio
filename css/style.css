@@ -559,7 +559,7 @@ body.light hr.separator {
   .header.hide-header {
     z-index: 0 !important;
     opacity: 0;
-  }
+}
 
   .header ul.icon-menu {
     margin: 0;
@@ -1907,3 +1907,215 @@ body.blog-post article img {
   }
 }
 
+/* Add to your existing CSS */
+.faq-page {
+  padding-bottom: 60px;
+}
+
+.faq-item {
+  background-color: #252525;
+  border-radius: 5px;
+  margin-bottom: 25px;
+  padding: 25px 30px;
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.faq-item h3 {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 30px;
+}
+
+.faq-item h3:before {
+  content: "Q:";
+  position: absolute;
+  left: 0;
+  color: #FFD700;
+  font-weight: 700;
+}
+
+.faq-item p {
+  color: #ddd;
+  margin-bottom: 0;
+  padding-left: 30px;
+}
+
+.faq-item a {
+  color: #FFD700;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.faq-item a:hover {
+  text-decoration: underline;
+}
+
+/* For light theme */
+body.light .faq-item {
+  background-color: #f8f9fa;
+  border: 1px solid #eaeaea;
+}
+
+body.light .faq-item h3 {
+  color: #333;
+}
+
+body.light .faq-item p {
+  color: #666;
+}
+
+@media (max-width: 576px) {
+  .faq-item {
+    padding: 20px;
+  }
+  
+  .faq-item h3 {
+    font-size: 18px;
+    padding-left: 25px;
+  }
+  
+  .faq-item p {
+    padding-left: 25px;
+  }
+}
+/* Add to your CSS file */
+/* SERVICES SECTION */
+.services .service-box {
+    background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
+    padding: 35px 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    transition: all 0.4s ease;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border: 1px solid #333;
+}
+
+.services .service-box::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(255, 193, 7, 0.15), transparent 70%);
+    transition: all 0.5s ease;
+    z-index: 0;
+}
+
+.services .service-box:hover::before {
+    top: -20%;
+    left: -20%;
+    background: radial-gradient(circle at center, rgba(255, 193, 7, 0.3), transparent 80%);
+}
+
+.services .service-box:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    border-color: #ffc107;
+}
+
+.services .service-box .icon {
+    font-size: 55px;
+    margin-bottom: 20px;
+    color: #ffc107;
+    z-index: 1;
+    position: relative;
+}
+
+.services .service-box h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #ffffff;
+    z-index: 1;
+    position: relative;
+}
+
+.services .service-box p {
+    color: #cccccc;
+    z-index: 1;
+    position: relative;
+}
+
+/* FAQ SECTION */
+.faq .faq-container {
+    background-color: #252525;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.faq .faq-item {
+    border-bottom: 1px solid #333;
+    padding: 20px 30px;
+}
+
+.faq .faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq .faq-question {
+    cursor: pointer;
+    margin: 0;
+    padding-right: 40px;
+    position: relative;
+    font-size: 18px;
+    color: #fff;
+}
+
+.faq .faq-question i {
+    margin-right: 10px;
+    color: #ffc107;
+}
+
+.faq .faq-question:after {
+    content: '\f107';
+    font-family: 'FontAwesome';
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: all 0.3s ease;
+}
+
+.faq .faq-item.active .faq-question:after {
+    transform: rotate(180deg);
+}
+
+.faq .faq-answer {
+    display: none;
+    padding-top: 15px;
+    color: #ddd;
+    padding-left: 30px;
+}
+
+/* CONTACT FORM */
+.contact .contactform input,
+.contact .contactform textarea {
+    background-color: #252525;
+    border: 1px solid #333;
+    color: #fff;
+}
+
+.contact .contactform input:focus,
+.contact .contactform textarea:focus {
+    border-color: #ffc107;
+}
+
+/* RESPONSIVE ADJUSTMENTS */
+@media (max-width: 767px) {
+    .services .service-box {
+        padding: 20px;
+    }
+    
+    .faq .faq-question {
+        font-size: 16px;
+    }
+}
